@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="One object, one laser, more power every round - until it survives or disintegrates. Real physics, crisp sound.">
+<meta property="og:title" content="Will It Disintegrate? (@willitdisintegrate)">
+<meta property="og:description" content="One object, one laser, more power every round. Watch on YouTube, TikTok, Facebook and Instagram.">
+<meta property="og:image" content="https://extexodus-sketch.github.io/willitdisintegrate/backdrop.jpg">
+<meta property="og:url" content="https://extexodus-sketch.github.io/willitdisintegrate/">
+<meta name="theme-color" content="#0b1512">
+<title>Will It Disintegrate?</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;900&display=swap">
+<style>
+/* One phone-width column. The 15 kW frame of EP 01 (sparks, beam, laser head) fades into the dark of the
+   green brick wall; the wordmark sits on the seam, the four platforms stack below. One dark look on purpose:
+   it is the channel's set, the same as on the videos. */
+:root {
+  --ink: #0b1512;        /* the brick wall in shadow */
+  --panel: #13221d;
+  --panel-hi: #1a2f28;
+  --line: #24392f;
+  --white: #ffffff;
+  --muted: #a9b8b1;
+  --gold: #ecb248;       /* the gold label colour on the videos */
+  --cyan: #5ef2ff;       /* the beam */
+  --font: "Montserrat", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html { background: var(--ink); padding-block: env(safe-area-inset-top, 0px) env(safe-area-inset-bottom, 0px); }
+body {
+  margin: 0;
+  background: var(--ink);
+  color: var(--white);
+  font-family: var(--font);
+  font-size: 16px;
+  line-height: 1.45;
+  -webkit-font-smoothing: antialiased;
+}
+img { max-width: 100%; }
+.page {
+  max-width: 480px;
+  margin: 0 auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 0 40px;
+}
+.hero {
+  position: relative;
+  margin-inline: calc(-1 * max(16px, env(safe-area-inset-left, 0px)));
+  max-width: calc(100% + 32px);
+  aspect-ratio: 900 / 700;
+  overflow: hidden;
+}
+.hero img { display: block; width: 100%; height: 100%; max-width: none; object-fit: cover; object-position: 40% 40%; }
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(11, 21, 18, 0) 50%, rgba(11, 21, 18, .78) 80%, var(--ink) 100%);
+}
+.brand { position: relative; margin-top: -72px; display: grid; gap: 8px; justify-items: start; }
+.wordmark {
+  margin: 0;
+  font-weight: 900;
+  font-size: clamp(38px, 11.5vw, 54px);
+  line-height: .98;
+  letter-spacing: -.01em;
+  text-transform: uppercase;
+  text-shadow: 0 3px 16px rgba(0, 0, 0, .6);
+}
+.wordmark .q { color: var(--gold); }
+.beam { width: 100%; max-width: 320px; height: 4px; border-radius: 2px; background: var(--cyan); box-shadow: 0 0 14px var(--cyan); }
+.tagline { margin: 6px 0 0; font-size: 17px; font-weight: 600; text-wrap: balance; }
+.handle { margin: 0; font-size: 15px; font-weight: 700; color: var(--gold); }
+
+.links { list-style: none; margin: 28px 0 0; padding: 0; display: grid; gap: 12px; }
+.links a {
+  display: grid;
+  grid-template-columns: 44px 1fr auto;
+  align-items: center;
+  gap: 14px;
+  min-height: 72px;
+  padding: 14px 16px 14px 14px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  color: var(--white);
+  text-decoration: none;
+  transition: background .15s, border-color .15s, transform .15s;
+}
+.links a:hover { background: var(--panel-hi); border-color: var(--gold); transform: translateY(-1px); }
+.links a:focus-visible { outline: 3px solid var(--cyan); outline-offset: 3px; }
+.icon { width: 44px; height: 44px; border-radius: 11px; display: grid; place-items: center; background: var(--gold); color: var(--ink); }
+.icon svg { width: 24px; height: 24px; }
+.label { min-width: 0; display: grid; }
+.label b { font-size: 17px; font-weight: 700; }
+.label span { font-size: 14px; color: var(--muted); }
+.arrow { color: var(--muted); font-size: 22px; }
+
+.foot { margin-top: 32px; font-size: 13px; color: var(--muted); text-align: center; text-wrap: balance; }
+@media (prefers-reduced-motion: reduce) { .links a { transition: none; } .links a:hover { transform: none; } }
+</style>
+</head>
+<body>
+
+<main class="page">
+  <div class="hero">
+    <img src="backdrop.jpg" alt="A laser beam hits the top of a steel nail at 15,000 watts and throws sparks across a wooden board">
+  </div>
+
+  <header class="brand">
+    <h1 class="wordmark">Will it disintegrate<span class="q">?</span></h1>
+    <div class="beam" aria-hidden="true"></div>
+    <p class="tagline">One object. One laser. More power every round.</p>
+    <p class="handle">@willitdisintegrate</p>
+  </header>
+
+  <ul class="links">
+    <li>
+      <a href="https://www.youtube.com/@willitdisintegrate" target="_blank" rel="noopener">
+        <span class="icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.6 7.2a2.5 2.5 0 0 0-1.8-1.8C18.2 5 12 5 12 5s-6.2 0-7.8.4A2.5 2.5 0 0 0 2.4 7.2C2 8.8 2 12 2 12s0 3.2.4 4.8a2.5 2.5 0 0 0 1.8 1.8C5.8 19 12 19 12 19s6.2 0 7.8-.4a2.5 2.5 0 0 0 1.8-1.8c.4-1.6.4-4.8.4-4.8s0-3.2-.4-4.8zM10 15V9l5.2 3L10 15z"/></svg>
+        </span>
+        <span class="label"><b>YouTube</b><span>Shorts, and the long compilations</span></span>
+        <span class="arrow" aria-hidden="true">&rsaquo;</span>
+      </a>
+    </li>
+    <li>
+      <a href="https://www.tiktok.com/@willitdisintegrate" target="_blank" rel="noopener">
+        <span class="icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.6 3c.4 2.1 1.7 3.6 3.9 3.8v3.1c-1.4.1-2.7-.3-3.9-1.1v5.9c0 3.4-2.5 5.8-5.6 5.8a5.5 5.5 0 0 1-5.5-5.6c0-3.5 3-6 6.5-5.4v3.2c-1.7-.4-3.4.6-3.4 2.3 0 1.4 1.1 2.4 2.4 2.4 1.5 0 2.5-1 2.5-2.9V3h3.1z"/></svg>
+        </span>
+        <span class="label"><b>TikTok</b><span>Every episode</span></span>
+        <span class="arrow" aria-hidden="true">&rsaquo;</span>
+      </a>
+    </li>
+    <li>
+      <a href="https://www.facebook.com/willitdisintegrate" target="_blank" rel="noopener">
+        <span class="icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-7.5h2.6l.4-3h-3V8.6c0-.9.3-1.5 1.6-1.5h1.6V4.4c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4v2.2H7.9v3h2.6V21h3z"/></svg>
+        </span>
+        <span class="label"><b>Facebook</b><span>Reels on the Page</span></span>
+        <span class="arrow" aria-hidden="true">&rsaquo;</span>
+      </a>
+    </li>
+    <li>
+      <a href="https://www.instagram.com/willitdisintegrate/" target="_blank" rel="noopener">
+        <span class="icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg>
+        </span>
+        <span class="label"><b>Instagram</b><span>Reels</span></span>
+        <span class="arrow" aria-hidden="true">&rsaquo;</span>
+      </a>
+    </li>
+  </ul>
+
+  <p class="foot">3D simulations made in Blender. Every number is calculated by a physics model.</p>
+</main>
+</body>
+</html>
